@@ -1,0 +1,31 @@
+Source: python-harfile
+Section: python
+Priority: optional
+Maintainer: Pexip AS <packaging@pexip.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-sequence-python3,
+ pybuild-plugin-pyproject,
+ python3-setuptools,
+ python3-all,
+ python3-hatchling,
+ python3-pytest (>=6.2.0~) <!nocheck>,
+ python3-hypothesis (>= 6~) <!nocheck>,
+ python3-hypothesis-jsonschema (>= 0.23.1~) <!nocheck>,
+Standards-Version: 4.6.2
+Homepage: https://github.com/schemathesis/harfile
+Vcs-Browser: https://github.com/pexip/os-python-harfile
+Vcs-Git: https://github.com/pexip/os-python-harfile.git
+
+Package: python3-harfile
+Architecture: all
+Depends:
+ ${python3:Depends},
+ ${misc:Depends},
+Suggests:
+ python-python-harfile-doc,
+Description: Zero-dependency writer for building HAR (HTTP Archive) files (Python 3)
+ This package provides a zero-dependency writer for building HAR (HTTP Archive) files in Python.
+ .
+ This package installs the library for Python 3.
